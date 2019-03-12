@@ -35,11 +35,7 @@ class DynamicUserForm extends Component {
             .then(body => {
                 console.log(body);
                 if (body.errors) {
-                    this.setState({
-                        snackOpened: true,
-                        snackType: "error",
-                        snackMessage: 'Registration failed!',
-                    });
+                    this.props.openSnack('error', 'Registration failed!');
                 } else {
                     // this.setState({
                     //     snackOpened: true,

@@ -13,7 +13,7 @@ class AddFlavourForm extends Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleAddFlavour = this.handleAddFlavour.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -22,8 +22,24 @@ class AddFlavourForm extends Component {
         });
     }
 
-    handleAddFlavour() {
-
+    handleSubmit(event) {
+        event.preventDefault();
+        fetch('http://localhost:9999/feed/flavour/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': sessionStorage.getItem('token'),
+            },
+            body: JSON.stringify(this.state)
+        })
+            .then(response => response.json())
+            .then(body => {
+                if (!body.flavour) {
+                    this.props.openSnack('error', 'Adding flavour failed!')
+                } else {
+                    this.props.openSnack('success', `${body.flavour.name} added successfully!`);
+                }
+            });
     }
 
     render() {
@@ -33,7 +49,7 @@ class AddFlavourForm extends Component {
                     Add new flavour
                 </Typography>
                 <Grid container spacing={8} alignItems="flex-end">
-                    <form noValidate autoComplete="off" onSubmit={this.handleAddFlavour}>
+                    <form noValidate autoComplete="off" onSubmit={this.handleSubmit}>
                         <Grid item>
                             <TextField
                                 margin={"normal"}

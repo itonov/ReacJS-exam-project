@@ -30,13 +30,11 @@ class DynamicAddForm extends Component {
                 <Grid container spacing={0} justify="center">
                     <Grid item xs={10}>
                         {formType === 'flavour'
-                            ? <AddFlavourForm/>
+                            ? <AddFlavourForm  openSnack={this.props.openSnack}/>
                             : null
                         }
                     </Grid>
                 </Grid>
-                <SnackbarWrapper handleSnackClose={this.handleSnackClose} snackOpened={this.state.snackOpened}
-                                 snackMessage={this.state.snackMessage} snackType={this.state.snackType}/>
             </Grid>
         )
     }

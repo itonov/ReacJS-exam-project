@@ -49,7 +49,7 @@ class Login extends Component {
                                 id="outlined-adornment-email"
                                 label="Email"
                                 name="email"
-                                type="email"
+                                type="text"
                                 onChange={this.handleChange}
                                 InputProps={{
                                     "error": (

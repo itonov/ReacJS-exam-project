@@ -24,6 +24,7 @@ class App extends Component {
         this.loginUser = this.loginUser.bind(this);
         this.logout = this.logout.bind(this);
         this.handleSnackClose = this.handleSnackClose.bind(this);
+        this.handleSnackOpen = this.handleSnackOpen.bind(this);
         this.toggleMainGridSize = this.toggleMainGridSize.bind(this);
     }
 
@@ -38,12 +39,7 @@ class App extends Component {
             .then(res => res.json())
             .then((data) => {
                 if (!data.email) {
-                    console.log(data)
-                    this.setState({
-                        snackOpened: true,
-                        snackType: 'error',
-                        snackMessage: 'Login failed!',
-                    });
+                    this.handleSnackOpen('error', 'Login failed!');
                 } else {
                     this.setState({
                         userEmail: data.email,
@@ -56,7 +52,7 @@ class App extends Component {
                     sessionStorage.setItem('userId', data.userId);
                     sessionStorage.setItem('token', data.token);
                 }
-            })
+            });
     }
 
     logout() {
@@ -73,7 +69,20 @@ class App extends Component {
     }
 
     handleSnackClose() {
-        this.setState({snackOpened: false});
+        this.setState({
+            snackOpened: false,
+            snackType: null,
+            snackMessage: null
+        });
+
+    }
+
+    handleSnackOpen(snackType, snackMessage) {
+        this.setState({
+            snackOpened: true,
+            snackType,
+            snackMessage
+        });
     }
 
     toggleMainGridSize() {
@@ -99,7 +108,7 @@ class App extends Component {
                                     {
                                         (this.state.isAdmin || this.state.isModerator)
                                             ? <Route path="/add/flavour" render={() =>
-                                                <DynamicAddForm formType={"flavour"}/>
+                                                <DynamicAddForm formType={"flavour"} openSnack={this.handleSnackOpen}/>
                                             }/>
                                             : null}
                                     {
@@ -108,10 +117,12 @@ class App extends Component {
                                             : null
                                     }
                                     <Route path="/register" render={() =>
-                                        <DynamicUserForm registerForm={true} loginUser={this.loginUser}/>}
+                                        <DynamicUserForm registerForm={true} loginUser={this.loginUser}
+                                                         openSnack={this.handleSnackOpen}/>}
                                     />
                                     < Route path="/login" render={() =>
-                                        <DynamicUserForm registerForm={false} loginUser={this.loginUser}/>}
+                                        <DynamicUserForm registerForm={false} loginUser={this.loginUser}
+                                                         openSnack={this.handleSnackOpen}/>}
                                     />
                                     <Redirect to="/"/>
                                 </Switch>
