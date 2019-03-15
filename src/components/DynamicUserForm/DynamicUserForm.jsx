@@ -33,7 +33,6 @@ class DynamicUserForm extends Component {
         })
             .then(response => response.json())
             .then(body => {
-                console.log(body);
                 if (body.errors) {
                     this.props.openSnack('error', 'Registration failed!');
                 } else {
@@ -42,7 +41,7 @@ class DynamicUserForm extends Component {
                     //     snackType: "success",
                     //     snackMessage: this.props.registerForm ? body.message : 'Login successful!'
                     // });
-                    this.props.loginUser({email: data.email, password: data.password});
+                    this.props.loginUser({email: data.email, password: data.password, rememberMe: true});
                 }
             });
     }

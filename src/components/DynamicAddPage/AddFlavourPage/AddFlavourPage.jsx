@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {Grid, TextField, Typography, RadioGroup, FormControlLabel, Radio, Button} from "@material-ui/core";
+import FlavourService from "../../../services/flavour/flavourService";
+import InputLabel from "@material-ui/core/es/InputLabel/InputLabel";
 
-class AddFlavourForm extends Component {
+class AddFlavourPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -9,7 +11,10 @@ class AddFlavourForm extends Component {
             price: null,
             description: null,
             availability: null,
-            quantity: null,
+            quantity: 0,
+            firstPicture: null,
+            secondPicture: null,
+
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,26 +22,34 @@ class AddFlavourForm extends Component {
     }
 
     handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value,
-        });
+        if (event.target.files) {
+            this.setState({
+                [event.target.name]: event.target.files[0]
+            });
+        } else {
+            this.setState({
+                [event.target.name]: event.target.value,
+            });
+        }
+        if (this.state.availability !== 'In Stock') {
+            this.setState({
+                quantity: 0
+            });
+        }
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch('http://localhost:9999/feed/flavour/create', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionStorage.getItem('token'),
-            },
-            body: JSON.stringify(this.state)
-        })
-            .then(response => response.json())
+        FlavourService.addNewFlavour(this.state)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                console.log(response)
+                this.props.openSnack('error', 'Adding flavour failed!')
+            })
             .then(body => {
-                if (!body.flavour) {
-                    this.props.openSnack('error', 'Adding flavour failed!')
-                } else {
+                if (body) {
                     this.props.openSnack('success', `${body.flavour.name} added successfully!`);
                 }
             });
@@ -90,29 +103,42 @@ class AddFlavourForm extends Component {
                                 margin={"normal"}
                             />
                         </Grid>
+                        {
+                            this.state.availability === 'In Stock'
+                                ?
+                                <Grid item>
+                                    <TextField
+                                        margin={"normal"}
+                                        label="Quantity"
+                                        name="quantity"
+                                        type="number"
+                                        onChange={this.handleChange}
+                                    />
+                                </Grid>
+                                : null
+                        }
                         <Grid item>
                             <RadioGroup
                                 label="Availability"
                                 name="availability"
-                                value={this.state.value}
                                 onChange={this.handleChange}
                             >
                                 <FormControlLabel value="In Stock" control={<Radio/>} label="In Stock"/>
-                                {
-                                    this.state.availability === 'In Stock'
-                                        ?
-                                        <TextField
-                                            margin={"normal"}
-                                            label="Quantity"
-                                            name="quantity"
-                                            type="number"
-                                            onChange={this.handleChange}
-                                        />
-                                        : null
-                                }
                                 <FormControlLabel value="External Order" control={<Radio/>} label="External Order"/>
                                 <FormControlLabel value="Unavailable" control={<Radio/>} label="Unavailable"/>
                             </RadioGroup>
+                        </Grid>
+                        <Grid item>
+                            <InputLabel>First picture:</InputLabel>
+                            <Button variant={"contained"}>
+                                <input type="file" accept="image/*" name="firstPicture" onChange={this.handleChange}/>
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <InputLabel>Second picture:</InputLabel>
+                            <Button variant={"contained"}>
+                                <input type="file" accept="image/*" name="secondPicture" onChange={this.handleChange}/>
+                            </Button>
                         </Grid>
                         <Button variant="contained" color="primary" type="submit">
                             Add flavour
@@ -124,4 +150,4 @@ class AddFlavourForm extends Component {
     }
 }
 
-export default AddFlavourForm;
+export default AddFlavourPage;

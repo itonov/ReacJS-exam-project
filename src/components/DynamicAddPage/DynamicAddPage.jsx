@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import {Grid} from "@material-ui/core";
-import AddFlavourForm from "./AddFlavourForm/AddFlavourForm";
-import SnackbarWrapper from "../SnackbarWrapper/SnackbarWrapper";
+import AddFlavourPage from "./AddFlavourPage/AddFlavourPage";
 
-class DynamicAddForm extends Component {
+class DynamicAddPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +29,7 @@ class DynamicAddForm extends Component {
                 <Grid container spacing={0} justify="center">
                     <Grid item xs={10}>
                         {formType === 'flavour'
-                            ? <AddFlavourForm  openSnack={this.props.openSnack}/>
+                            ? <AddFlavourPage openSnack={this.props.openSnack}/>
                             : null
                         }
                     </Grid>
@@ -40,4 +39,4 @@ class DynamicAddForm extends Component {
     }
 }
 
-export default DynamicAddForm;
+export default DynamicAddPage;

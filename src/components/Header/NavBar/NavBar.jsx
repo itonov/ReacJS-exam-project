@@ -18,7 +18,7 @@ class NavBar extends Component {
                         </NavLink>
                     </Typography>
                     {
-                        this.props.user !== null
+                        this.props.user.email !== null
                             ? <Button color="default" onClick={(event) => {
                                 event.preventDefault();
                                 this.props.logout();

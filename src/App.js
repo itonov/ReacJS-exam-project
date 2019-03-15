@@ -6,7 +6,9 @@ import DynamicUserForm from './components/DynamicUserForm/DynamicUserForm';
 import SnackbarWrapper from './components/SnackbarWrapper/SnackbarWrapper';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
-import DynamicAddForm from "./components/DynamicAddForm/DynamicAddForm";
+import DynamicAddPage from './components/DynamicAddPage/DynamicAddPage';
+import ViewAllPage from './components/Flavour/ViewAll/ViewAllPage';
+import DetailsPage from "./components/Flavour/Details/DetailsPage";
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +20,7 @@ class App extends Component {
             snackOpened: false,
             snackType: null,
             snackMessage: null,
-            mainGridSize: 12,
+            sideBarOpened: false,
         };
 
         this.loginUser = this.loginUser.bind(this);
@@ -51,6 +53,9 @@ class App extends Component {
                     });
                     sessionStorage.setItem('userId', data.userId);
                     sessionStorage.setItem('token', data.token);
+                    if (user.rememberMe) {
+                        sessionStorage.setItem('rememberMe', 'checked');
+                    }
                 }
             });
     }
@@ -66,6 +71,7 @@ class App extends Component {
         });
         sessionStorage.removeItem('userId');
         sessionStorage.removeItem('token');
+        sessionStorage.removeItem('rememberMe');
     }
 
     handleSnackClose() {
@@ -86,10 +92,44 @@ class App extends Component {
     }
 
     toggleMainGridSize() {
-        if (this.state.mainGridSize === 9) {
-            this.setState({mainGridSize: 12});
-        } else {
-            this.setState({mainGridSize: 9});
+        this.setState({
+            sideBarOpened: !this.state.sideBarOpened,
+        })
+    }
+
+    componentDidMount() {
+        if (sessionStorage.getItem('rememberMe')) {
+            const token = sessionStorage.getItem('token');
+
+            fetch('http://localhost:9999/auth/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': token,
+                },
+            })
+                .then((resp) => {
+                    if (resp.status === 200) {
+                        return resp.json();
+                    } else {
+                        sessionStorage.removeItem('userId');
+                        sessionStorage.removeItem('token');
+                        sessionStorage.removeItem('rememberMe');
+                    }
+                })
+                .then((data) => {
+                    if (data) {
+                        this.setState({
+                            userEmail: data.email,
+                            isAdmin: data.isAdmin,
+                            isModerator: data.isModerator,
+                        });
+                        sessionStorage.setItem('userId', data.userId);
+                        sessionStorage.setItem('token', data.token);
+                        sessionStorage.setItem('rememberMe', 'checked');
+                    }
+                })
+                .catch(err => console.log(err))
         }
     }
 
@@ -97,20 +137,35 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Fragment>
-                    <Header user={this.state.userEmail} logout={this.logout}
-                            toggleMainGridSize={this.toggleMainGridSize}/>
+                    <Header
+                        user={{
+                            email: this.state.userEmail,
+                            isAdmin: this.state.isAdmin,
+                            isModerator: this.state.isModerator
+                        }}
+                        logout={this.logout}
+                        toggleMainGridSize={this.toggleMainGridSize}/>
                     <Grid container>
-                        <Grid item xs={this.state.mainGridSize === 9 ? 3 : false}/>
-                        <Grid item xs={this.state.mainGridSize}>
+                        <Grid item xs={12} className={this.state.sideBarOpened ? "padding-left-20" : "padding-left-0"}>
                             <main>
                                 <Switch>
                                     <Route exact path="/" render={() => <Home/>}/>
+                                    <Route path="/flavours/all" render={() =>
+                                        <ViewAllPage user={this.state.userEmail}
+                                                     isAdmin={(this.state.isAdmin || this.state.isModerator)}
+                                        />
+                                    }/>
+                                    <Route path="/flavour/details/" render={() =>
+                                        <DetailsPage openSnack={this.handleSnackOpen}/>
+                                    }/>
                                     {
                                         (this.state.isAdmin || this.state.isModerator)
-                                            ? <Route path="/add/flavour" render={() =>
-                                                <DynamicAddForm formType={"flavour"} openSnack={this.handleSnackOpen}/>
+                                            ? <Route path="/flavour/add" render={() =>
+                                                <DynamicAddPage formType={"flavour"}
+                                                                openSnack={this.handleSnackOpen}/>
                                             }/>
-                                            : null}
+                                            : null
+                                    }
                                     {
                                         this.state.userEmail !== null
                                             ? <Redirect to="/"/>
@@ -132,7 +187,8 @@ class App extends Component {
                                                  snackMessage={this.state.snackMessage}
                                                  snackType={this.state.snackType}/>
                             </main>
-                        </Grid></Grid>
+                        </Grid>
+                    </Grid>
                 </Fragment>
             </BrowserRouter>
         );

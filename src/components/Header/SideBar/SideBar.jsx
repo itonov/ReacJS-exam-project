@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import {Drawer, List, ListItem, ListItemIcon, ListItemText, Divider, Collapse} from "@material-ui/core";
 import {
     AddCircleTwoTone,
@@ -37,7 +37,7 @@ class SideBar extends Component {
             >
                 <List component="nav">
                     <ListItem button onClick={onClose}>
-                        <ListItemIcon className={"align-right-custom"}><ChevronLeftTwoTone/></ListItemIcon>
+                        <ListItemIcon className={"margin-left-auto"}><ChevronLeftTwoTone/></ListItemIcon>
                     </ListItem>
                     <Divider/>
                     <NavLink to={"/"}>
@@ -46,32 +46,40 @@ class SideBar extends Component {
                             <ListItemText primary={"Home"}/>
                         </ListItem>
                     </NavLink>
-
-                    <ListItem button key={"Flavours"} onClick={this.toggleFlavourCollapse}>
-                        <ListItemIcon>
-                            <StoreTwoTone/>
-                        </ListItemIcon>
-                        <ListItemText inset primary="Flavours"/>
-                        {this.state.flavourCollapseOpen ? <ExpandLess/> : <ExpandMore/>}
-                    </ListItem>
-                    <Collapse in={this.state.flavourCollapseOpen} timeout="auto" unmountOnExit
-                              classes={{container: "margin-left-20px"}}
-                    >
-                        <List component="div">
-                            <NavLink to={"/view/flavour"}>
-                                <ListItem button key={"ViewFlavours"}>
+                    {
+                        (this.props.user.isAdmin || this.props.user.isModerator)
+                            ? <Fragment>
+                                <ListItem button key={"Flavours"} onClick={this.toggleFlavourCollapse}>
+                                    <ListItemIcon>
+                                        <StoreTwoTone/>
+                                    </ListItemIcon>
+                                    <ListItemText inset primary="Flavours"/>
+                                    {this.state.flavourCollapseOpen ? <ExpandLess/> : <ExpandMore/>}
+                                </ListItem>
+                                <Collapse in={this.state.flavourCollapseOpen} timeout="auto" unmountOnExit>
+                                    <List component="div">
+                                        <NavLink to={"/flavours/all"}>
+                                            <ListItem button key={"AllFlavours"}>
+                                                <ListItemIcon><StoreTwoTone/></ListItemIcon>
+                                                <ListItemText primary={"All Flavours"}/>
+                                            </ListItem>
+                                        </NavLink>
+                                        <NavLink to={"/flavour/add"}>
+                                            <ListItem button key={"AddFlavours"}>
+                                                <ListItemIcon><AddCircleTwoTone/></ListItemIcon>
+                                                <ListItemText primary={"Add Flavour"}/>
+                                            </ListItem>
+                                        </NavLink>
+                                    </List>
+                                </Collapse>
+                            </Fragment>
+                            : <NavLink to={"/flavours/all"}>
+                                <ListItem button key={"AllFlavours"}>
                                     <ListItemIcon><StoreTwoTone/></ListItemIcon>
-                                    <ListItemText primary={"View Flavours"}/>
+                                    <ListItemText primary={"All Flavours"}/>
                                 </ListItem>
                             </NavLink>
-                            <NavLink to={"/add/flavour"}>
-                                <ListItem button key={"AddFlavours"}>
-                                    <ListItemIcon><AddCircleTwoTone/></ListItemIcon>
-                                    <ListItemText primary={"Add Flavour"}/>
-                                </ListItem>
-                            </NavLink>
-                        </List>
-                    </Collapse>
+                    }
                 </List>
                 <List>
                     {/*{['All mail', 'Trash', 'Spam'].map((text, index) => (*/}

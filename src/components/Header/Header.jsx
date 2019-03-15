@@ -20,16 +20,18 @@ class Header extends Component {
     render() {
         return (
             <header>
+                <SideBar open={this.state.openSidebar} onClose={this.toggleSidebar} user={this.props.user}/>
                 <Grid container>
-                    <Grid item xs={this.state.openSidebar ? 3 : false}>
-                        <SideBar open={this.state.openSidebar} onClose={this.toggleSidebar}/>
-                    </Grid>
-                    <Grid item xs={this.state.openSidebar ? 9 : 12}>
-                        <NavBar user={this.props.user} logout={this.props.logout} toggleSidebar={this.toggleSidebar}/>
-                    </Grid>
+                    <Grid item
+                          xs={12}
+                          className={this.state.openSidebar ? "padding-left-20" : "padding-left-0"}>
+                    <NavBar
+                        user={this.props.user} logout={this.props.logout}
+                        toggleSidebar={this.toggleSidebar}/>
                 </Grid>
-            </header>
-        )
+            </Grid>
+    </header>
+    )
     }
 }
 

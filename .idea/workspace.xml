@@ -2,27 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aff4025-a139-4881-a6a7-5d2cbc202834" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-app" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/feed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/is-auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/feed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/util/encryption.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Flavour/Details/DetailsPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/image/imageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/react-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DynamicAddForm/AddFlavourForm/AddFlavourForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DynamicAddPage/AddFlavourPage/AddFlavourPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DynamicAddForm/DynamicAddForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DynamicAddPage/DynamicAddPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/flavour/flavourService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/flavour/flavourService.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="124" column="89" selection-start-line="124" selection-start-column="89" selection-end-line="124" selection-end-column="89" />
+            <state relative-caret-position="1392">
+              <caret line="158" column="85" selection-start-line="158" selection-start-column="85" selection-end-line="158" selection-end-column="85" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -48,19 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Header/Header.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/Flavour/Details/DetailsPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
+            <state relative-caret-position="238">
+              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -71,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+            <state relative-caret-position="242">
+              <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -81,25 +71,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DynamicAddForm/DynamicAddForm.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/DynamicAddForm/AddFlavourForm/AddFlavourForm.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -107,17 +82,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/flavour/flavourService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/Header.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="284">
+              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -125,10 +100,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="102">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +126,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -150,6 +137,9 @@
       <find>emailRegex</find>
       <find>style</find>
       <find>logoutUser</find>
+      <find>handleExpandClick</find>
+      <find>align-right-custom</find>
+      <find>CloudManager</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/components/navbar/Navbar.js" />
         <option value="$PROJECT_DIR$/src/components/navbar/Navbar.css" />
         <option value="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" />
-        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" />
         <option value="$PROJECT_DIR$/src/components/Navbar/NavBar.jsx" />
@@ -179,19 +168,31 @@
         <option value="$PROJECT_DIR$/src/components/DynamicUserForm/Register/Register.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/Drawer/Drawer.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/NavBar/NavBar.css" />
-        <option value="$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/components/DynamicAddForm/AddLiquid/AddLiquid.jsx" />
         <option value="$PROJECT_DIR$/src/components/DynamicAddForm/AddLiquidForm/AddLiquidForm.jsx" />
         <option value="$PROJECT_DIR$/src/components/DynamicAddForm/AddLiquidForm/AddFlavourForm.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DynamicAddForm/DynamicAddForm.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DynamicAddForm/AddFlavourForm/AddFlavourForm.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DynamicAddPage/DynamicAddPage.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DetailsPage/DetailsPage.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.css" />
+        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css" />
+        <option value="$PROJECT_DIR$/src/util/cloudManager.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/services/image/imageService.js" />
+        <option value="$PROJECT_DIR$/src/components/Flavour/ViewAllPage.css" />
+        <option value="$PROJECT_DIR$/src/components/DynamicAddPage/AddFlavourPage/AddFlavourPage.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Flavour/ViewAllPage.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.jsx" />
+        <option value="$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx" />
         <option value="$PROJECT_DIR$/src/components/Header/SideBar/SideBar.jsx" />
         <option value="$PROJECT_DIR$/src/services/flavour/flavourService.js" />
-        <option value="$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx" />
-        <option value="$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx" />
-        <option value="$PROJECT_DIR$/src/components/DynamicAddForm/DynamicAddForm.jsx" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/DynamicAddForm/AddFlavourForm/AddFlavourForm.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Flavour/Details/DetailsPage.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.jsx" />
       </list>
     </option>
   </component>
@@ -230,15 +231,76 @@
               <item name="react-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DynamicAddForm" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicAddPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DynamicAddForm" type="462c0819:PsiDirectoryNode" />
-              <item name="AddFlavourForm" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicAddPage" type="462c0819:PsiDirectoryNode" />
+              <item name="AddFlavourPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicUserForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicUserForm" type="462c0819:PsiDirectoryNode" />
+              <item name="Login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Flavour" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Flavour" type="462c0819:PsiDirectoryNode" />
+              <item name="Details" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Flavour" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewAll" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="NavBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="SideBar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-app" type="b2602c69:ProjectViewProjectNode" />
@@ -278,16 +340,17 @@
     <property name="ts.external.directory.path" value="C:\Users\Dell\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\183.4886.41\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Softuni\JS-Web\ReactJS\ReactJS-exam-project\react-app\src\components\Flavour\ViewAll" />
+      <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\Header" />
+      <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\DynamicUserForm" />
+      <recent name="D:\Softuni\JS-Web\ReactJS\Components\ExerciseTask\react-app\src\components\navbar" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\DynamicAddForm\AddLiquid" />
       <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\DynamicAddForm" />
       <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\DynamicUserForm" />
       <recent name="D:\Softuni\JS-Web\ReactJS\Components\ExerciseTask\react-app\src\components\Register" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\Header" />
-      <recent name="D:\Softuni\JS-Web\ReactJS\ExamProject\react-app\src\components\DynamicUserForm" />
-      <recent name="D:\Softuni\JS-Web\ReactJS\Components\ExerciseTask\react-app\src\components\navbar" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -332,14 +395,17 @@
       <workItem from="1552129770511" duration="2518000" />
       <workItem from="1552134621235" duration="52737000" />
       <workItem from="1552412175550" duration="6303000" />
+      <workItem from="1552498609874" duration="30946000" />
+      <workItem from="1552588553947" duration="32685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81936000" />
+    <option name="totallyTimeSpent" value="145567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -347,8 +413,8 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990086" weight="0.19971672" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990086" weight="0.33002833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -378,19 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SnackbarWrapper/SnackbarWrapper.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -405,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -446,16 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Register/Register.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/Drawer/Drawer.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/Home/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -472,54 +508,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/SideBar/SideBar.jsx">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="68" column="69" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="248">
+          <caret line="525" column="8" selection-start-line="525" selection-start-column="8" selection-end-line="525" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css">
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicAddPage/DynamicAddPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Register/Register.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/flavour/flavourService.js">
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/SideBar/SideBar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.jsx">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+        <state relative-caret-position="188">
+          <caret line="17174" column="12" selection-start-line="17174" selection-start-column="12" selection-end-line="17174" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+        <state relative-caret-position="68">
+          <caret line="4" column="87" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/cloudManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/image/imageService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicAddPage/AddFlavourPage/AddFlavourPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/SideBar/SideBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="71" column="50" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -528,8 +629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/DynamicUserForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
+        <state relative-caret-position="595">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -538,33 +639,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="124" column="89" selection-start-line="124" selection-start-column="89" selection-end-line="124" selection-end-column="89" />
+        <state relative-caret-position="1392">
+          <caret line="158" column="85" selection-start-line="158" selection-start-column="85" selection-end-line="158" selection-end-column="85" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DynamicAddForm/DynamicAddForm.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+        <state relative-caret-position="17">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicUserForm/Login/Login.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DynamicAddForm/AddFlavourForm/AddFlavourForm.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Flavour/Details/DetailsPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/NavBar/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/flavour/flavourService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Flavour/ViewAll/ViewAllPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>

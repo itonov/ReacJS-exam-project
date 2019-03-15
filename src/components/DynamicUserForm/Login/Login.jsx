@@ -1,6 +1,15 @@
 import React, {Component} from "react";
 import './Login.css';
-import {InputAdornment, IconButton, Grid, Typography, TextField, Button} from "@material-ui/core";
+import {
+    InputAdornment,
+    IconButton,
+    Grid,
+    Typography,
+    TextField,
+    Button,
+    FormControlLabel,
+    Checkbox
+} from "@material-ui/core";
 import {LockTwoTone, AlternateEmailTwoTone, Visibility, VisibilityOff} from '@material-ui/icons';
 
 class Login extends Component {
@@ -10,10 +19,12 @@ class Login extends Component {
             email: null,
             password: null,
             showPassword: false,
+            rememberMe: false,
         };
 
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.toggleRememberMe = this.toggleRememberMe.bind(this);
     }
 
     handleClickShowPassword() {
@@ -25,6 +36,12 @@ class Login extends Component {
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
+        });
+    }
+
+    toggleRememberMe() {
+        this.setState({
+            rememberMe: !this.state.rememberMe,
         });
     }
 
@@ -86,6 +103,20 @@ class Login extends Component {
                                         </InputAdornment>
                                     ),
                                 }}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={8} direction="column" className="padding-15px">
+                        <Grid item>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={this.state.rememberMe}
+                                        onChange={this.toggleRememberMe}
+                                        color="primary"
+                                    />
+                                }
+                                label="Remember me"
                             />
                         </Grid>
                     </Grid>
