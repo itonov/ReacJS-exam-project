@@ -1,3 +1,29 @@
+This is project for online store, selling flavour liquids for e-cigs.
+
+Annonymous content:
+- Home page,
+- Register,
+- Browse flavours,
+- Flavours details.
+
+User content (logged in):
+- Home page,
+- Logout,
+- Browse flavours,
+- Flavours details,
+- Make orders,
+- View shopping cart (orders)
+
+Admin/Moderator content:
+- (all user content)
+- Add new flavours
+- Delete flavours
+
+All pictures are being uploaded to OneDrive from the server.
+
+
+--------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
