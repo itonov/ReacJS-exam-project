@@ -1,0 +1,21 @@
+.selected-picture {
+    height: 100%;
+    width: 100%;
+}
+
+.margin-20px {
+    margin: 20px;
+}
+
+.image-list {
+    max-width: inherit;
+    overflow-y: auto;
+}
+
+.preview-picture {
+    margin-left: 5px;
+}
+
+.text-area-around {
+    padding: 10px;
+}

@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import DynamicAddPage from './components/DynamicAddPage/DynamicAddPage';
 import ViewAllPage from './components/Flavour/ViewAll/ViewAllPage';
 import DetailsPage from "./components/Flavour/Details/DetailsPage";
+import ViewShoppingCart from "./components/ShoppingCart/ViewShoppingCart";
 
 class App extends Component {
     constructor(props) {
@@ -65,9 +66,6 @@ class App extends Component {
             userEmail: null,
             isAdmin: false,
             isModerator: false,
-            snackOpened: true,
-            snackType: "success",
-            snackMessage: "Logout successful!",
         });
         sessionStorage.removeItem('userId');
         sessionStorage.removeItem('token');
@@ -144,43 +142,87 @@ class App extends Component {
                             isModerator: this.state.isModerator
                         }}
                         logout={this.logout}
-                        toggleMainGridSize={this.toggleMainGridSize}/>
+                        toggleMainGridSize={this.toggleMainGridSize}
+                        handleSnackOpen={this.handleSnackOpen}/>
                     <Grid container>
                         <Grid item xs={12} className={this.state.sideBarOpened ? "padding-left-20" : "padding-left-0"}>
                             <main>
-                                <Switch>
-                                    <Route exact path="/" render={() => <Home/>}/>
-                                    <Route path="/flavours/all" render={() =>
-                                        <ViewAllPage user={this.state.userEmail}
-                                                     isAdmin={(this.state.isAdmin || this.state.isModerator)}
-                                        />
-                                    }/>
-                                    <Route path="/flavour/details/" render={() =>
-                                        <DetailsPage openSnack={this.handleSnackOpen}/>
-                                    }/>
-                                    {
-                                        (this.state.isAdmin || this.state.isModerator)
-                                            ? <Route path="/flavour/add" render={() =>
-                                                <DynamicAddPage formType={"flavour"}
-                                                                openSnack={this.handleSnackOpen}/>
+                                {
+                                    this.state.userEmail !== null
+                                        ? <Switch>
+                                            <Route
+                                                exact
+                                                path="/"
+                                                render={() => <Home user={{
+                                                    email: this.state.userEmail,
+                                                    isAdmin: this.state.isAdmin,
+                                                    isModerator: this.state.isModerator
+                                                }}/>}
+                                            />
+                                            <Route path="/flavours/all" render={() =>
+                                                <ViewAllPage user={this.state.userEmail}
+                                                             isAdmin={(this.state.isAdmin || this.state.isModerator)}
+                                                />
                                             }/>
-                                            : null
-                                    }
-                                    {
-                                        this.state.userEmail !== null
-                                            ? <Redirect to="/"/>
-                                            : null
-                                    }
-                                    <Route path="/register" render={() =>
-                                        <DynamicUserForm registerForm={true} loginUser={this.loginUser}
-                                                         openSnack={this.handleSnackOpen}/>}
-                                    />
-                                    < Route path="/login" render={() =>
-                                        <DynamicUserForm registerForm={false} loginUser={this.loginUser}
-                                                         openSnack={this.handleSnackOpen}/>}
-                                    />
-                                    <Redirect to="/"/>
-                                </Switch>
+                                            <Route path="/flavour/details/" render={() =>
+                                                <DetailsPage
+                                                    openSnack={this.handleSnackOpen}
+                                                    sessionEnd={this.logout}
+                                                    user={{
+                                                        email: this.state.userEmail,
+                                                        isAdmin: this.state.isAdmin,
+                                                        isModerator: this.state.isModerator
+                                                    }}
+                                                />
+                                            }/>
+                                            <Route path="/cart" render={() =>
+                                                <ViewShoppingCart
+                                                    user={{
+                                                        email: this.state.userEmail,
+                                                        isAdmin: this.state.isAdmin,
+                                                        isModerator: this.state.isModerator
+                                                    }}
+                                                    openSnack={this.handleSnackOpen}
+                                                />
+                                            }/>
+                                            {
+                                                (this.state.isAdmin || this.state.isModerator)
+                                                    ? <Route path="/flavour/add" render={() =>
+                                                        <DynamicAddPage formType={"flavour"}
+                                                                        openSnack={this.handleSnackOpen}/>
+                                                    }/>
+                                                    : null
+                                            }
+                                            <Route path="*" render={() => <Redirect to={"/"}/>}/>
+                                        </Switch>
+                                        : <Switch>
+                                            <Route exact path="/" render={() => <Home/>}/>
+                                            <Route path="/flavours/all" render={() =>
+                                                <ViewAllPage user={this.state.userEmail}
+                                                             isAdmin={(this.state.isAdmin || this.state.isModerator)}
+                                                />
+                                            }/>
+                                            <Route path="/flavour/details/" render={() =>
+                                                <DetailsPage
+                                                    openSnack={this.handleSnackOpen}
+                                                    user={{
+                                                        email: this.state.userEmail,
+                                                        isAdmin: this.state.isAdmin,
+                                                        isModerator: this.state.isModerator
+                                                    }}
+                                                />
+                                            }/>
+                                            <Route path="/register" render={() =>
+                                                <DynamicUserForm registerForm={true} loginUser={this.loginUser}
+                                                                 openSnack={this.handleSnackOpen}/>}
+                                            />
+                                            < Route path="/login" render={() =>
+                                                <DynamicUserForm registerForm={false} loginUser={this.loginUser}
+                                                                 openSnack={this.handleSnackOpen}/>}
+                                            />
+                                        </Switch>
+
+                                }
 
                                 <SnackbarWrapper handleSnackClose={this.handleSnackClose}
                                                  snackOpened={this.state.snackOpened}

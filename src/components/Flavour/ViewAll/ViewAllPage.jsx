@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import {NavLink} from "react-router-dom";
 import {
     Grid,
     CardActions,
@@ -14,14 +13,11 @@ import {
 import './ViewAllPage.css';
 import {
     Delete as DeleteIcon,
-    MoreVert as MoreVertIcon,
     ExpandMore as ExpandMoreIcon,
     Share as ShareIcon,
     ExpandLess as ExpandLessIcon,
 } from "@material-ui/icons";
 import FlavourService from "../../../services/flavour/flavourService";
-import ImageService from "../../../services/image/imageService";
-import ButtonBase from "@material-ui/core/es/ButtonBase/ButtonBase";
 import Button from "@material-ui/core/es/Button/Button";
 
 class ViewAllPage extends Component {
@@ -73,40 +69,8 @@ class ViewAllPage extends Component {
             })
             .then(async (data) => {
                 if (data) {
-                    console.log(data)
-                    const flavours = [];
-                    for (const flavour of data.flavours) {
-                        flavour['expanded'] = false;
-                        await ImageService.getImageBase64(flavour.firstPictureCloudId)
-                            .then((response) => {
-                                if (response.status === 200) {
-                                    return response.json()
-                                }
-                                console.log(response)
-                            })
-                            .then(body => {
-                                if (body) {
-                                    flavour['firstImageLocation'] = body.imageLocation;
-                                }
-                            });
-
-                        await ImageService.getImageBase64(flavour.secondPictureCloudId)
-                            .then((response) => {
-                                if (response.status === 200) {
-                                    return response.json()
-                                }
-                                console.log(response)
-                            })
-                            .then(body => {
-                                if (body) {
-                                    flavour['secondImageLocation'] = body.imageLocation;
-                                }
-                            });
-                        flavours.push(flavour);
-                    }
-
                     this.setState({
-                        data: flavours
+                        data: data.flavours
                     });
                 }
             });
@@ -142,7 +106,7 @@ class ViewAllPage extends Component {
                                                 />
                                                 <CardMedia
                                                     className={"media"}
-                                                    image={flavour.firstImageLocation}
+                                                    image={flavour.firstPictureLocation}
                                                 >
                                                 </CardMedia>
                                                 <CardContent>
